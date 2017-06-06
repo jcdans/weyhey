@@ -1,3 +1,4 @@
 # weyhey
 inventory_renegwapo
-# Louise L. Dañosos
+# Louise L. DaÃ±osos
+# Janel D. Moncada
