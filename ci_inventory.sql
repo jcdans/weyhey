@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2017 at 01:35 PM
+-- Generation Time: Jun 23, 2017 at 01:44 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -176,22 +176,22 @@ INSERT INTO `computer` (`c_id`, `c_row`, `c_hostname`, `c_motherboard`, `c_proce
 (122, 'R16', 'BILLING 2', 'H61M-K', 'Intel Core i5 3.1Ghz', '4.00GB', '500GB', 'NVIDIA Geforce 210', 'Acer', 'Dell', '', 'Infini', 'Infini', 'Win 7 Prof essional 64bit', NULL, 2, 'OLD OPS', NULL),
 (123, 'R16', 'R16S3', 'P8B75-MLE', 'Intel Core i3 3.3Ghz', '4.00GB', '500GB', 'Intel HD Graphics', 'Samsung', 'Acer', '', 'Genius', 'Infini', 'Win 7 Professional 64bit', NULL, 2, 'OLD OPS', NULL),
 (124, 'z', 'SALES-MANAGER2', 'H61H2-M17', 'Intel Core i5 2.50Ghz', '4GB', '500GB', 'Intel HD Graphics Family', 'Compaq', NULL, '', 'Genius', 'A4Tech', 'Win 7 Ultimate 64bit', NULL, 2, 'OLD OPS', NULL),
-(125, '5', 'CRI-B2L1', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB66DCW', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 1, 'EXPANSION', 'DEFECTIVE'),
+(125, '5', 'CRI-B2L1', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB66DCW', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 0, 'EXPANSION', 'DEFECTIVE'),
 (126, '5', 'CRI-B2L2', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB5AC5Y', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 8, '', 'used by Daphnie /  brought to davao'),
-(127, '5', 'CRI-B2L3', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB28W2', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 1, 'EXPANSION', 'Rodolfo V. Tuble'),
-(128, '5', 'CRI-B2L4', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB5AC5T', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 1, 'EXPANSION', 'Brought to Davao(Edwin)'),
-(129, '5', 'CRI-B2L5', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB5AC1N', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 1, 'EXPANSION', 'Emeliza Pesquer'),
-(130, '5', 'CRI-B2L6', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PBD8F5C', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 1, 'EXPANSION', 'Ana Grace Sabellano'),
-(131, '5', 'CRI-B2L7', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB66DDE', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 1, 'EXPANSION', 'Primo Dionson'),
-(132, '5', 'CRI-B2L8', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PBP28W3', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft   Office Professional Plus 2016', 1, 'EXPANSION', 'Randolf Sartagoda'),
+(127, '5', 'CRI-B2L3', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB28W2', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 0, 'EXPANSION', 'Rodolfo V. Tuble'),
+(128, '5', 'CRI-B2L4', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB5AC5T', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 0, 'EXPANSION', 'Brought to Davao(Edwin)'),
+(129, '5', 'CRI-B2L5', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB5AC1N', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 0, 'EXPANSION', 'Emeliza Pesquer'),
+(130, '5', 'CRI-B2L6', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PBD8F5C', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 0, 'EXPANSION', 'Ana Grace Sabellano'),
+(131, '5', 'CRI-B2L7', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PB66DDE', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft office professional 2010', 0, 'EXPANSION', 'Primo Dionson'),
+(132, '5', 'CRI-B2L8', 'Lenovo ThinkPad T430', 'Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz 2.60GHz', '8GB', '120 GB', 'PBP28W3', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional x64', 'Microsoft   Office Professional Plus 2016', 0, 'EXPANSION', 'Randolf Sartagoda'),
 (133, NULL, 'HR-MANAGER', 'Lenovo   ThinkPad T410', 'Intel(R)   Core(TM) i5 CPU M 560 @ 2.67GHz', '4GB', '300GB', NULL, NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional', 'Microsoft   Office Professional Plus 2016', 8, '', 'Katherine Abella'),
-(134, NULL, 'PROJECT-MANAGER', 'Lenovo   ThinkPad T410', 'Intel(R)   Core(TM) i5 CPU M 560 @ 2.67GHz', '4GB', '300GB', 'R8-L56RL', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional', 'Microsoft   Office Professional Plus 2016', 1, 'EXPANSION', 'Met Ramos'),
-(135, NULL, 'SALESLAPTOP', 'Lenovo   ThinkPad X201', 'Intel(R)   Core(TM) i5 CPU M 520 @ 2.40GHz', '8GB', '300GB', NULL, NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows   7 Enterprise', 'Microsoft   Office Professional Plus 2016', 1, 'OLD OPS', 'Apple Barco'),
-(136, NULL, 'SalesBoard', 'ASUS SonicMaster', 'Intel(R)   Celeron(R) CPU N2815 @ 1.86GHz', '2GB', '500GB', 'X451M', NULL, NULL, 'LAPTOP', NULL, NULL, 'WIndows   7 Ultimate', 'Microsoft   Office Standard 2010', 1, 'OLD OPS', 'Eva Atibula'),
-(137, NULL, NULL, 'Lenovo   G40', 'Intel®   Celeron® 2957U @ 1.40GHz', '2GB', '500GB', 'YB01862459', NULL, NULL, 'LAPTOP', NULL, NULL, 'WIndows   7 Ultimate', NULL, 1, 'EXPANSION', NULL),
-(138, NULL, NULL, 'Lenovo G570', 'Intel® Core™ i5-2430M CPU @   2.40GHz', '4GB', '200GB', 'CB10896503', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Enterprise', NULL, 1, 'EXPANSION', 'Microsoft   Office Professional Plus 2013'),
-(139, NULL, 'conference2/   ', 'Lenovo G460', 'Intel(R) Core(TM) i3 CPU M   370 @ 2.40GHz', '8GB', '300GB', 'CB08355565', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional', NULL, 1, 'EXPANSION', 'Microsoft Office Professional   Plus 2016'),
-(140, NULL, 'SEOXARA', 'Lenovo   ThinkPad X201', NULL, NULL, NULL, 'R9-47FTF', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL);
+(134, NULL, 'PROJECT-MANAGER', 'Lenovo   ThinkPad T410', 'Intel(R)   Core(TM) i5 CPU M 560 @ 2.67GHz', '4GB', '300GB', 'R8-L56RL', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional', 'Microsoft   Office Professional Plus 2016', 0, 'EXPANSION', 'Met Ramos'),
+(135, NULL, 'SALESLAPTOP', 'Lenovo   ThinkPad X201', 'Intel(R)   Core(TM) i5 CPU M 520 @ 2.40GHz', '8GB', '300GB', NULL, NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows   7 Enterprise', 'Microsoft   Office Professional Plus 2016', 0, 'OLD OPS', 'Apple Barco'),
+(136, NULL, 'SalesBoard', 'ASUS SonicMaster', 'Intel(R)   Celeron(R) CPU N2815 @ 1.86GHz', '2GB', '500GB', 'X451M', NULL, NULL, 'LAPTOP', NULL, NULL, 'WIndows   7 Ultimate', 'Microsoft   Office Standard 2010', 0, 'OLD OPS', 'Eva Atibula'),
+(137, NULL, NULL, 'Lenovo   G40', 'Intel®   Celeron® 2957U @ 1.40GHz', '2GB', '500GB', 'YB01862459', NULL, NULL, 'LAPTOP', NULL, NULL, 'WIndows   7 Ultimate', NULL, 0, 'EXPANSION', NULL),
+(138, NULL, NULL, 'Lenovo G570', 'Intel® Core™ i5-2430M CPU @   2.40GHz', '4GB', '200GB', 'CB10896503', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Enterprise', NULL, 0, 'EXPANSION', 'Microsoft   Office Professional Plus 2013'),
+(139, NULL, 'conference2/   ', 'Lenovo G460', 'Intel(R) Core(TM) i3 CPU M   370 @ 2.40GHz', '8GB', '300GB', 'CB08355565', NULL, NULL, 'LAPTOP', NULL, NULL, 'Windows 7 Professional', NULL, 0, 'EXPANSION', 'Microsoft Office Professional   Plus 2016'),
+(140, NULL, 'SEOXARA', 'Lenovo   ThinkPad X201', NULL, NULL, NULL, 'R9-47FTF', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -210,6 +210,7 @@ CREATE TABLE `department` (
 --
 
 INSERT INTO `department` (`dept_id`, `dept_name`, `dept_space`) VALUES
+(0, 'NOT ASSIGNED', 'XXXXX'),
 (1, 'IT Department', 'EXPANSION'),
 (2, 'CRM', 'EXPANSION'),
 (3, 'Writers', 'EXPANSION'),
@@ -522,7 +523,7 @@ ALTER TABLE `computer`
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `dept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `dept_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `headset`
 --
