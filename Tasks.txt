@@ -1,0 +1,10 @@
+>> Notifications
+>> Desktop, Laptop, Headset, Peripheral Stats
+>> Edit profile
+>> Edit password
+>> Headsets Edit Button
+	>>Released By queried from the database
+	>>Department queried from the database
+>> Remove (Headset full view module)
+>> Remove (Peripheral full view module)
+>> Incidents/Log Datatable and Add/Edit/Delete
