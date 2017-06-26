@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2017 at 09:28 AM
+-- Generation Time: Jun 26, 2017 at 05:57 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -115,15 +115,6 @@ CREATE TABLE `incident` (
   `inc_activity` varchar(5000) DEFAULT NULL,
   `inc_status` enum('LOW','NORMAL','HIGH','URGENT','LOG') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `incident`
---
-
-INSERT INTO `incident` (`inc_id`, `inc_date`, `inc_activity`, `inc_status`) VALUES
-(6, '2017-06-13', 'Successfully made delete function for Log Module.', 'LOW'),
-(7, '2017-06-28', 'HEEHAAAA!!!!', 'HIGH'),
-(8, '2017-06-26', 'YEAAAAAAAAAAAAAA BOIIIIIIIiiiiii', 'URGENT');
 
 -- --------------------------------------------------------
 
@@ -240,7 +231,7 @@ ALTER TABLE `headset`
 -- AUTO_INCREMENT for table `incident`
 --
 ALTER TABLE `incident`
-  MODIFY `inc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `inc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `peripherals`
 --
