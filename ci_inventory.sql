@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2017 at 05:10 PM
--- Server version: 10.1.24-MariaDB
--- PHP Version: 7.1.6
+-- Generation Time: Jun 30, 2017 at 01:54 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -113,24 +111,19 @@ CREATE TABLE `headset` (
 
 CREATE TABLE `incident` (
   `inc_id` int(11) NOT NULL,
-  `inc_date` date DEFAULT NULL,
+  `inc_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `inc_activity` varchar(5000) DEFAULT NULL,
-  `inc_status` enum('LOW','NORMAL','HIGH','URGENT') DEFAULT NULL
+  `inc_status` enum('LOW','NORMAL','HIGH','URGENT') DEFAULT NULL,
+  `inc_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `incident`
 --
 
-INSERT INTO `incident` (`inc_id`, `inc_date`, `inc_activity`, `inc_status`) VALUES
-(1, '2017-06-27', 'Installed the latest version of Xampp', 'LOW'),
-(2, '2017-06-27', 'YEA BOI.', 'URGENT'),
-(3, '2017-06-27', 'Updated the functionality of changing the password', 'NORMAL'),
-(4, '2017-06-27', 'Need to attend FRENCH Class at 4:30pm', 'URGENT'),
-(5, '2017-06-30', 'Presentation of OJT Project to Master Rene Mino.', 'HIGH'),
-(6, '2017-06-27', 'Deleted data of all assets.', 'HIGH'),
-(7, '2017-06-27', 'Remodeled the 2 factor authentication on editing the user\'s password.', 'URGENT'),
-(8, '2017-06-28', 'Text on IT126 about sorting. Study insertion sort algorithm. I hate my life.', 'HIGH');
+INSERT INTO `incident` (`inc_id`, `inc_date`, `inc_activity`, `inc_status`, `inc_user`) VALUES
+(11, '2017-06-30 09:03:40', 'asdasd', 'NORMAL', 0),
+(12, '2017-06-30 09:38:24', 'hello world', 'LOW', 5);
 
 -- --------------------------------------------------------
 
@@ -167,7 +160,7 @@ CREATE TABLE `users` (
   `emp_email` varchar(100) DEFAULT NULL,
   `emp_type` enum('ADMIN','USERS') DEFAULT NULL,
   `emp_status` enum('AC','INA') DEFAULT NULL,
-  `emp_profpic` blob
+  `emp_profpic` varchar(55) DEFAULT 'default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -175,14 +168,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`emp_id`, `emp_uname`, `emp_pword`, `emp_fname`, `emp_lname`, `emp_midinitial`, `emp_bday`, `emp_cellno`, `emp_email`, `emp_type`, `emp_status`, `emp_profpic`) VALUES
-(0, 'NOT ASSIGNED', 'zx1234567890qwerty', 'NOT ASSIGNED', 'NOT ASSIGNED', '-', '1111-11-01', 'NOT ASSIGNED', 'abcdDummy@gmail.com', 'USERS', 'INA', NULL),
-(3, 'eric.cortes', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Eric', 'Cortes', '', '0000-00-00', '', 'eric.cortes@ph.clickablebrand.com', 'ADMIN', 'AC', NULL),
-(4, 'ronald', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Ronald', '', '', '0000-00-00', '', 'ronald@gmail.com', 'ADMIN', 'AC', NULL),
-(5, 'itsupport', '097f5834ea92d5ec2a7b773c6099613bb217c2ef99ba1f7c4ebff3053bf63ff7', 'Renato', 'Mino', 'G', '1982-05-05', '09422968332', 'itsupport@clickablebrand.com', 'ADMIN', 'AC', NULL),
-(6, 'rene.mino', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Rene', 'Mino', '', '2017-06-23', '', 'rene.mino@cri.clickablebrand.com', 'ADMIN', 'AC', NULL),
-(7, 'jcdans', 'fbfb386efea67e816f2dda0a8c94a98eb203757aebb3f55f183755a192d44467', 'John Carl', 'Danosos', 'R', '1997-12-27', '09422968332', 'developer.danzjohn97@gmail.com', 'ADMIN', 'AC', NULL),
-(8, 'jcjosh', '3af280f377f904f12fed77edf44de454f402253e6d2a3e17f7ce5156fd1ec672', 'Joshua', 'Danosos', 'R', '1992-05-11', '09152433075', 'danzjoshua@gmail.com', '', 'AC', NULL),
-(9, 'dodgiedans', 'cf0b854f5a17fdad773d462438d4d7328722b817d40a74ecb8d9ad79f98aa251', 'Dodgie', 'Danosos', 'V', '1969-02-06', '09177251236', 'ddanosos@lexmark.com', 'ADMIN', 'AC', NULL);
+(0, 'NOT ASSIGNED', 'zx1234567890qwerty', 'NOT ASSIGNED', 'NOT ASSIGNED', '-', '1111-11-01', 'NOT ASSIGNED', 'abcdDummy@gmail.com', 'USERS', 'INA', 'default.png'),
+(3, 'eric.cortes', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Eric', 'Cortes', '', '0000-00-00', '', 'eric.cortes@ph.clickablebrand.com', 'ADMIN', 'AC', 'default.png'),
+(4, 'ronald', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Ronald', '', '', '0000-00-00', '', 'ronald@gmail.com', 'ADMIN', 'AC', 'default.png'),
+(5, 'itsupport', '097f5834ea92d5ec2a7b773c6099613bb217c2ef99ba1f7c4ebff3053bf63ff7', 'Renato', 'Mino', 'G', '1982-05-05', '09422968332', 'itsupport@clickablebrand.com', 'ADMIN', 'AC', 'technical-support1498823312.png'),
+(6, 'rene.mino', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Rene', 'Mino', '', '2017-06-23', '', 'rene.mino@cri.clickablebrand.com', 'ADMIN', 'AC', 'default.png'),
+(7, 'jcdans', 'fbfb386efea67e816f2dda0a8c94a98eb203757aebb3f55f183755a192d44467', 'John Carl', 'Danosos', 'R', '1997-12-27', '09422968332', 'developer.danzjohn97@gmail.com', 'ADMIN', 'AC', 'default.png'),
+(8, 'jcjosh', '3af280f377f904f12fed77edf44de454f402253e6d2a3e17f7ce5156fd1ec672', 'Joshua', 'Danosos', 'R', '1992-05-11', '09152433075', 'danzjoshua@gmail.com', '', 'AC', 'default.png'),
+(9, 'dodgiedans', 'cf0b854f5a17fdad773d462438d4d7328722b817d40a74ecb8d9ad79f98aa251', 'Dodgie', 'Danosos', 'V', '1969-02-06', '09177251236', 'ddanosos@lexmark.com', 'ADMIN', 'AC', 'default.png');
 
 --
 -- Indexes for dumped tables
@@ -213,7 +206,8 @@ ALTER TABLE `headset`
 -- Indexes for table `incident`
 --
 ALTER TABLE `incident`
-  ADD PRIMARY KEY (`inc_id`);
+  ADD PRIMARY KEY (`inc_id`),
+  ADD KEY `inc_user` (`inc_user`);
 
 --
 -- Indexes for table `peripherals`
@@ -250,7 +244,7 @@ ALTER TABLE `headset`
 -- AUTO_INCREMENT for table `incident`
 --
 ALTER TABLE `incident`
-  MODIFY `inc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `inc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `peripherals`
 --
@@ -277,7 +271,12 @@ ALTER TABLE `computer`
 ALTER TABLE `headset`
   ADD CONSTRAINT `h1` FOREIGN KEY (`h_releasedby`) REFERENCES `users` (`emp_id`),
   ADD CONSTRAINT `h2` FOREIGN KEY (`h_dept`) REFERENCES `department` (`dept_id`);
-COMMIT;
+
+--
+-- Constraints for table `incident`
+--
+ALTER TABLE `incident`
+  ADD CONSTRAINT `incident_ibfk_1` FOREIGN KEY (`inc_user`) REFERENCES `users` (`emp_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
