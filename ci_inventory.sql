@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2017 at 02:59 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: Jul 02, 2017 at 05:19 PM
+-- Server version: 10.1.24-MariaDB
+-- PHP Version: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -122,10 +124,10 @@ CREATE TABLE `incident` (
 --
 
 INSERT INTO `incident` (`inc_id`, `inc_date`, `inc_activity`, `inc_status`, `inc_user`) VALUES
-(11, '2017-06-30 09:03:40', 'asdasd', 'NORMAL', 0),
-(12, '2017-06-30 09:38:24', 'hello world', 'LOW', 5),
-(13, '2017-06-30 12:11:32', 'KIM BOK ROLL', 'URGENT', 6),
-(14, '2017-06-30 12:37:48', 'asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  asdf  ', 'LOW', 6);
+(1, '2017-07-01 08:14:41', 'Implemented filter on all input fields.', 'URGENT', 5),
+(2, '2017-07-01 08:59:18', 'Its so nice to be happy, shalalala.', 'LOW', 3),
+(3, '2017-07-01 09:02:38', 'is a crimping master.', 'HIGH', 14),
+(4, '2017-07-01 09:07:31', 'is a Mr. Steal yo girl.', 'NORMAL', 11);
 
 -- --------------------------------------------------------
 
@@ -171,14 +173,13 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`emp_id`, `emp_uname`, `emp_pword`, `emp_fname`, `emp_lname`, `emp_midinitial`, `emp_bday`, `emp_cellno`, `emp_email`, `emp_type`, `emp_status`, `emp_profpic`) VALUES
 (0, 'NOT ASSIGNED', 'zx1234567890qwerty', 'NOT ASSIGNED', 'NOT ASSIGNED', '-', '1111-11-01', 'NOT ASSIGNED', 'abcdDummy@gmail.com', 'USERS', 'INA', 'default.png'),
-(3, 'eric.cortes', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Eric', 'Cortes', '', '0000-00-00', '', 'eric.cortes@ph.clickablebrand.com', 'ADMIN', 'AC', 'Koala1498827047.jpg'),
-(4, 'ronald', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Ronald', '', '', '0000-00-00', '', 'ronald@gmail.com', 'ADMIN', 'AC', 'default.png'),
-(5, 'itsupport', '097f5834ea92d5ec2a7b773c6099613bb217c2ef99ba1f7c4ebff3053bf63ff7', 'Renato', 'Mino', 'G', '1982-05-05', '09422968332', 'itsupport@clickablebrand.com', 'ADMIN', 'AC', 'technical-support14988233121498826988.png'),
+(3, 'eric.cortes', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Eric', 'Cortes', 'R', '1985-06-11', '09422968332', 'eric.cortes@ph.clickablebrand.com', 'ADMIN', 'AC', 'dobbyfreeelf1498897970.gif'),
+(5, 'itsupport', '097f5834ea92d5ec2a7b773c6099613bb217c2ef99ba1f7c4ebff3053bf63ff7', 'Information Technology', 'Support', 'T', '2009-06-23', '09422968332', 'itsupport@clickablebrand.com', 'ADMIN', 'AC', 'technical-support149882331214988269881498845623.png'),
 (6, 'rene.mino', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Rene', 'Mino', '', '2017-06-23', '', 'rene.mino@cri.clickablebrand.com', 'ADMIN', 'AC', 'user_pic_41498827019.jpg'),
-(7, 'jcdans', 'e14cf05bc9c3fd82649be0d999086cb8491ff4531d22d974b7d64c8b0b8dafa6', 'John Carl', 'Danosos', 'R', '1997-12-27', '09422968332', 'developer.danzjohn97@gmail.com', 'ADMIN', 'AC', 'default.png'),
 (8, 'jcjosh', '3af280f377f904f12fed77edf44de454f402253e6d2a3e17f7ce5156fd1ec672', 'Joshua', 'Danosos', 'R', '1992-05-11', '09152433075', 'danzjoshua@gmail.com', '', 'AC', 'default.png'),
 (9, 'dodgiedans', 'cf0b854f5a17fdad773d462438d4d7328722b817d40a74ecb8d9ad79f98aa251', 'Dodgie', 'Danosos', 'V', '1969-02-06', '09177251236', 'ddanosos@lexmark.com', 'ADMIN', 'AC', 'default.png'),
-(11, 'ronald.olid', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Ronald', 'Olid', '', '2017-06-30', '', 'ronald.olid@cri-clickablebrand.com', 'ADMIN', 'AC', 'ronald-pic14988244541498827076.png');
+(11, 'ronald.olid', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Ronald', 'Olid', '', '2017-06-30', '', 'ronald.olid@cri-clickablebrand.com', 'ADMIN', 'AC', 'ronald-pic14988244541498827076.png'),
+(14, 'edwin.gwapo', '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd', 'Edwin', 'Supervisor', 'G', '1975-11-19', '09090909090', 'edwin.gwapo@clickablebrand.com', 'ADMIN', 'AC', 'sacha-baron-cohen-borat1498899836.jpg');
 
 --
 -- Indexes for dumped tables
@@ -247,7 +248,7 @@ ALTER TABLE `headset`
 -- AUTO_INCREMENT for table `incident`
 --
 ALTER TABLE `incident`
-  MODIFY `inc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `inc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `peripherals`
 --
@@ -257,7 +258,7 @@ ALTER TABLE `peripherals`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --
@@ -280,6 +281,7 @@ ALTER TABLE `headset`
 --
 ALTER TABLE `incident`
   ADD CONSTRAINT `incident_ibfk_1` FOREIGN KEY (`inc_user`) REFERENCES `users` (`emp_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
