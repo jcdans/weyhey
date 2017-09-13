@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2017 at 11:06 AM
+-- Generation Time: Sep 13, 2017 at 11:16 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -119,36 +119,6 @@ CREATE TABLE `logs` (
   `log_tag` enum('Added Desktop','Updated Desktop','Deleted Desktop','Added Laptop','Updated Laptop','Deleted Laptop','Added Headset','Updated Headset','Deleted Headset','Added Peripheral','Updated Peripheral','Deleted Peripheral','Imported Excel','Deleted All Asset') NOT NULL,
   `log_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `logs`
---
-
-INSERT INTO `logs` (`log_id`, `log_date`, `log_description`, `log_tag`, `log_user`) VALUES
-(1, '2017-08-30 08:02:38', 'Added new desktop', 'Added Desktop', 5),
-(2, '2017-08-30 08:05:07', 'Edited the details of the computer', 'Updated Desktop', 5),
-(3, '2017-08-30 08:12:10', 'deleted asset', 'Deleted Desktop', 5),
-(4, '2017-08-30 08:18:39', 'added headset', 'Added Headset', 5),
-(5, '2017-08-30 08:19:20', 'delteted headset', 'Deleted Headset', 5),
-(6, '2017-08-30 08:59:51', 'Edited Peripheral', 'Updated Peripheral', 5),
-(7, '2017-08-30 09:00:22', 'Deleted Peripheral', 'Deleted Peripheral', 5),
-(8, '2017-08-30 09:12:20', 'I do not know.', 'Added Peripheral', 3),
-(9, '2017-08-30 09:12:37', 'hello world', 'Deleted Peripheral', 3),
-(10, '2017-08-30 09:22:13', 'Added laptop', 'Added Laptop', 3),
-(11, '2017-08-30 09:22:35', 'i deleted laptop', 'Deleted Laptop', 3),
-(12, '2017-08-30 11:15:36', 'New Imported Excel Blalhalbahlabl', 'Imported Excel', 11),
-(13, '2017-08-30 11:23:27', 'Imported a new data', 'Imported Excel', 5),
-(14, '2017-08-30 11:25:49', 'I have uploaded a new record of assets for each peripherals', 'Imported Excel', 5),
-(15, '2017-08-30 11:29:32', 'importeadak;sldj;kfjl;azsjkdflkasjfz', 'Imported Excel', 5),
-(16, '2017-08-30 11:29:53', 'Deleted all Assasdeawrawrsaf', 'Deleted All Asset', 5),
-(17, '2017-08-30 11:51:22', 'I asdded an import file.', 'Imported Excel', 5),
-(18, '2017-08-30 11:54:14', 'Deleted all Data', 'Deleted All Asset', 5),
-(19, '2017-08-30 11:55:09', 'I added a new set sheet of assets.', 'Imported Excel', 5),
-(20, '2017-08-31 12:03:57', 'Edited Computer', 'Updated Desktop', 5),
-(21, '2017-08-31 12:04:40', 'TWEE', 'Updated Laptop', 5),
-(22, '2017-08-31 12:32:57', 'faseaweaw', 'Imported Excel', 5),
-(27, '2017-09-13 07:58:24', 'Imported excel peripheral', 'Imported Excel', 5),
-(28, '2017-09-13 08:56:13', 'cleared al ldata', 'Deleted All Asset', 5);
 
 -- --------------------------------------------------------
 
@@ -269,7 +239,7 @@ ALTER TABLE `headset`
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `peripherals`
 --
