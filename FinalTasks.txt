@@ -1,0 +1,4 @@
+1.) CSV Format
+2.) Make Archive page and place critical functions there (Delete all Records).
+3.) Make Export Function for Summary(Just the numbers)
+4.) Put JCharts in the system.
